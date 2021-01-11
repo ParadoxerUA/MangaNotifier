@@ -21,8 +21,6 @@ BASE_DIR = environ.Path(__file__) - 3
 # Read .env file
 env = environ.Env()
 environ.Env.read_env(env_file=os.path.join(BASE_DIR, ".env"))
-print(os.path.join(BASE_DIR, ".env"))
-print("DB_NAME" in os.environ)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
