@@ -4,7 +4,7 @@ from .serializers import MangaListSerializer
 
 
 class MangaListView(APIView):
-    serializer = MangaListSerializer()
+
     def get(self, request):
         return Response(data={"OK!"}, status=200)
 
