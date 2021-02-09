@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser
 
 
 # Create your models here.
@@ -21,4 +21,4 @@ class MangaList(models.Model):
     name = models.TextField(max_length=100)
     url = models.URLField(max_length=300)
     updated = models.BooleanField(default=False)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)

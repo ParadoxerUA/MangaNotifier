@@ -6,7 +6,8 @@ from django.contrib.auth.hashers import make_password
 class MangaListSerializer(serializers.ModelSerializer):
     class Meta:
         model = MangaList
-        fields = ['name', 'url', 'updated']
+        # TODO: add mixin instead of passing user to serializer
+        fields = ['name', 'url', 'updated', 'user']
 
 
 class UserSerializer(serializers.ModelSerializer):
